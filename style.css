@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #dfe6e9;
+  color: #333333;
+  font-family: "Sen", sans-serif;
+}
+
+#app {
+  max-width: 450px;
+  width: 90%;
+  background: #fff;
+  margin: 5% auto;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+#todo-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+#todo-subtitle {
+  font-size: 0.85rem;
+  position: relative;
+  width: 100%;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+  color: #7a7a7a;
+}
+
+#todo-subtitle::after {
+  content: "";
+  width: 2.6rem;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #2cafc9;
+}
+
+#todo-input {
+  outline: none;
+  border: 1px solid #eaeaea;
+  height: 2.2rem;
+  padding: 0 0.7rem;
+  color: #333333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 1rem;
+  border-radius: 2px;
+}
+
+#todo-input:focus,
+#todo-input:hover {
+  border: 1px solid #2cafc9;
+}
+
+#todo-input::placeholder {
+  color: #bfbfbf;
+}
+
+#todo-submit {
+  border: none;
+  background: #2cafc9;
+  color: #fff;
+  width: 100%;
+  height: 2.2rem;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 2rem;
+}
+
+#todo-submit:hover {
+  background: #2098b0;
+}
+
+#todo-output {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+}
+
+#todo-output li {
+  font-size: 0.8rem;
+  padding: 0.7rem 1rem;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  position: relative;
+  border-left: 3px solid #dfe6e9;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+#todo-output li::after {
+  content: "\203A";
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  right: 0.7rem;
+  color: #babebf;
+  transform: translateY(-50%);
+}
+
+#todo-output li:hover {
+  border-left: 3px solid #2098b0;
+}
+
+#todo-output li:hover::after {
+  color: #2098b0;
+}
